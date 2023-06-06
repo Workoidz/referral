@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: referral_production
   username: referral
   password: <%= ENV["REFERRAL_DATABASE_PASSWORD"] %>

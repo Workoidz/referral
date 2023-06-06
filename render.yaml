@@ -1,0 +1,20 @@
+databases:
+  - name: referral
+    databaseName: referral
+    user: referral
+    plan: free
+
+services:
+  - type: web
+    name: referral
+    env: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: referral
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
