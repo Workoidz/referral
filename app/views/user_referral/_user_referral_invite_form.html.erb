@@ -1,0 +1,6 @@
+<%= form_tag user_referral_invite_path,method: :post do %>
+	<%= label_tag :email, 'Email:' %>
+  	<%= email_field_tag :email, nil, required: true %>
+
+  	<%= submit_tag 'Sent new invite' %>
+<%end%>

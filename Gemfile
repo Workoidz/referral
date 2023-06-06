@@ -10,6 +10,10 @@ gem "rails", "~> 7.0.5"
 gem 'devise'
 gem 'devise-bootstrap-views'
 
+gem 'will_paginate'
+gem 'letter_opener'
+
+
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"

@@ -1,2 +1,15 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<p>Logged-in User ID: <%= current_user.email %></p>
+
+<%= render 'user_referral/user_referral_invite_form' %>
+
+<p>
+<h2>Here, my referrals :</h2>
+</p>
+
+<% @user_referrals.each do | user_referral | %>
+
+	<h3><%= user_referral.email %></h3>
+
+<% end %>
+
+<div><%= will_paginate @user_referrals %></div>
